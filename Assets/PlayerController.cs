@@ -15,8 +15,13 @@ public class PlayerController : MonoBehaviour
     public List<Character> characters;
     public float jumpDuration = 0.30f;
 
+    private GameObject _characterPrefab;
+
     private Vector3 _currentPosition;
     private Vector3 _targetPosition;
+
+    private Quaternion _startRotation;
+    private Quaternion _endRotation;
 
     private Vector3 _initialScale;
 
@@ -29,7 +34,7 @@ public class PlayerController : MonoBehaviour
         _currentPosition = transform.position;
         _initialScale = transform.localScale;
 
-        Instantiate(characters[0].prefab, _currentPosition + characters[0].offset,
+        _characterPrefab = Instantiate(characters[0].prefab, _currentPosition + characters[0].offset,
           Quaternion.identity, this.transform);
     }
 
@@ -54,16 +59,20 @@ public class PlayerController : MonoBehaviour
 
         float x = Lerp(_currentPosition.x, _targetPosition.x, t);
         float z = Lerp(_currentPosition.z, _targetPosition.z, t);
-        float y = 0.5f;
+        float y = 0;
 
         Vector3 displacement = new Vector3(x, y, z);
 
         transform.position = displacement;
+        transform.rotation = Quaternion.Lerp(_startRotation, _endRotation, t);
 
         if (displacement == _targetPosition)
         {
             _playerMoving = false;
             _currentPosition = _targetPosition;
+
+            _characterPrefab.GetComponent<Rigidbody>()
+                .AddForce(0, -5, 0, ForceMode.VelocityChange);
         }
         _playerMoving = false;
     }
@@ -75,29 +84,61 @@ public class PlayerController : MonoBehaviour
 
     private void WaitForKeyboardInput()
     {
-        //TODO(check syntax): Debug.LogMessage("Hello world");
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) ||
+            Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            TranslatePlayer(new Vector3(0, 0, 1));
+            transform.localScale = new Vector3(0, -0.2f, 0);
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+
+        //Debug.Log("Hello world");
+        if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            TranslatePlayer(new Vector3(0, 0, -1));
+            TranslatePlayer('N');
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyUp(KeyCode.DownArrow))
         {
-            TranslatePlayer(new Vector3(-1, 0, 0));
+            TranslatePlayer('S');
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
-            TranslatePlayer(new Vector3(1, 0, 0));
+            TranslatePlayer('W');
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            TranslatePlayer('E');
         }
     }
 
-    private void TranslatePlayer(Vector3 displacement)
+    private void TranslatePlayer(char direction)
     {
         _currentPosition = transform.position;
-        _targetPosition = _currentPosition + displacement;
+
+        _startRotation = transform.rotation;
+        _endRotation = Quaternion.identity;
+
+        transform.localScale = _initialScale;
+
+        switch (direction)
+        {
+            case 'N':
+                _targetPosition += new Vector3(0, 0, 1);
+                _endRotation = Quaternion.Euler(0, 0, 0);
+                break;
+            case 'S':
+                _targetPosition += new Vector3(0, 0, -1);
+                _endRotation = Quaternion.Euler(0, 180, 0);
+                break;
+            case 'W':
+                _targetPosition += new Vector3(-1, 0, 0);
+                _endRotation = Quaternion.Euler(0, 90, 0);
+                break;
+            case 'E':
+                _targetPosition += new Vector3(1, 0, 0);
+                _endRotation = Quaternion.Euler(0, 270, 0);
+                break;
+        }
+
+        //_targetPosition = _currentPosition + displacement;
 
         _elapsedTime = 0;
 
