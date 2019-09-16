@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
         float x = Lerp(_currentPosition.x, _targetPosition.x, t);
         float z = Lerp(_currentPosition.z, _targetPosition.z, t);
-        float y = 0;
+        float y = Mathf.Sin(Mathf.PI * t) * 1;
 
         Vector3 displacement = new Vector3(x, y, z);
 
@@ -72,9 +72,8 @@ public class PlayerController : MonoBehaviour
             _currentPosition = _targetPosition;
 
             _characterPrefab.GetComponent<Rigidbody>()
-                .AddForce(0, -5, 0, ForceMode.VelocityChange);
+                .AddForce(Vector3.down * 5, ForceMode.VelocityChange);
         }
-        _playerMoving = false;
     }
 
     private float Lerp(float min, float max, float t)
@@ -87,7 +86,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) ||
             Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.localScale = new Vector3(0, -0.2f, 0);
+            float newScale = _initialScale.y * 0.8f;
+            transform.localScale = new Vector3(_initialScale.x, newScale, _initialScale.z);
         }
 
         //Debug.Log("Hello world");
@@ -116,31 +116,27 @@ public class PlayerController : MonoBehaviour
         _startRotation = transform.rotation;
         _endRotation = Quaternion.identity;
 
-        transform.localScale = _initialScale;
-
         switch (direction)
         {
             case 'N':
-                _targetPosition += new Vector3(0, 0, 1);
-                _endRotation = Quaternion.Euler(0, 0, 0);
-                break;
-            case 'S':
-                _targetPosition += new Vector3(0, 0, -1);
+                _targetPosition = _currentPosition + new Vector3(0, 0, 1);
                 _endRotation = Quaternion.Euler(0, 180, 0);
                 break;
+            case 'S':
+                _targetPosition = _currentPosition + new Vector3(0, 0, -1);
+                _endRotation = Quaternion.Euler(0, 0, 0);
+                break;
             case 'W':
-                _targetPosition += new Vector3(-1, 0, 0);
+                _targetPosition = _currentPosition + new Vector3(-1, 0, 0);
                 _endRotation = Quaternion.Euler(0, 90, 0);
                 break;
             case 'E':
-                _targetPosition += new Vector3(1, 0, 0);
+                _targetPosition = _currentPosition + new Vector3(1, 0, 0);
                 _endRotation = Quaternion.Euler(0, 270, 0);
                 break;
         }
 
-        //_targetPosition = _currentPosition + displacement;
-
-        _elapsedTime = 0;
+        _elapsedTime = 0f;
 
         _playerMoving = true;
     }
