@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public float jumpDuration = 0.30f;
 
     private GameObject _characterPrefab;
+    private ICharacterable _characterBehaviour;
 
     private Vector3 _currentPosition;
     private Vector3 _targetPosition;
@@ -36,6 +37,8 @@ public class PlayerController : MonoBehaviour
 
         _characterPrefab = Instantiate(characters[0].prefab, _currentPosition + characters[0].offset,
           Quaternion.identity, this.transform);
+
+        _characterBehaviour = _characterPrefab.GetComponent<ICharacterable>();
     }
 
     // Update is called once per frame
@@ -137,6 +140,8 @@ public class PlayerController : MonoBehaviour
         }
 
         _elapsedTime = 0f;
+
+        _characterBehaviour.HopAudioPlay();
 
         _playerMoving = true;
     }
