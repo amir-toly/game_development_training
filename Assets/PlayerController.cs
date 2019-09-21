@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
         _currentPosition = transform.position;
         _initialScale = transform.localScale;
 
-        _characterPrefab = Instantiate(characters[0].prefab, _currentPosition + characters[0].offset,
+        _characterPrefab = Instantiate(characters[1].prefab, _currentPosition + characters[0].offset,
           Quaternion.identity, this.transform);
 
         _characterBehaviour = _characterPrefab.GetComponent<ICharacterable>();
