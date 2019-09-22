@@ -235,6 +235,20 @@ MonoBehaviour:
       type: 3}
     offset: {x: 0, y: 0.5, z: 0}
     unlocked: 1
+  - name: Gumi
+    prefab: {fileID: 6562658228179980752, guid: 337a1f27fe61a4cd2a12e6bc6d898e9f,
+      type: 3}
+    offset: {x: 0, y: 0.5, z: 0}
+    unlocked: 1
+  - name: Man
+    prefab: {fileID: 5338963131967490002, guid: 1558bc9c838264eb5a618f15b098702c,
+      type: 3}
+    offset: {x: 0, y: 0.5, z: 0}
+    unlocked: 1
+  - name: Old
+    prefab: {fileID: 722927876107287173, guid: a26162f56be8d4b978c60e098b10a4e2, type: 3}
+    offset: {x: 0, y: 0.5, z: 0}
+    unlocked: 1
   jumpDuration: 0.3
 --- !u!1 &1018237713
 GameObject:
