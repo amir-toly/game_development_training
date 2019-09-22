@@ -230,11 +230,6 @@ MonoBehaviour:
       type: 3}
     offset: {x: 0, y: 0.5, z: 0}
     unlocked: 1
-  - name: Car
-    prefab: {fileID: 6755863028884553167, guid: 8c114a8df91c640c4a373800b1cdc8d9,
-      type: 3}
-    offset: {x: 0, y: 0.5, z: 0}
-    unlocked: 1
   - name: Gumi
     prefab: {fileID: 6562658228179980752, guid: 337a1f27fe61a4cd2a12e6bc6d898e9f,
       type: 3}
