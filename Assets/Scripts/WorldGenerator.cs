@@ -62,6 +62,13 @@ public class WorldGenerator : MonoBehaviour
                         Quaternion.identity,
                         this.transform);
                     break;
+                case LineType.Road:
+                    Instantiate(
+                        worldLines.road,
+                        new Vector3(0, 0, builderZOffset),
+                        Quaternion.identity,
+                        this.transform);
+                    break;
             }
 
             builderZOffset += 0.9f;
