@@ -48,23 +48,51 @@ public class WorldGenerator : MonoBehaviour
 
             switch (lineType)
             {
-                case LineType.Grass:
+                /*case LineType.Grass:
                     Instantiate(
                         worldLines.lightGrass,
                         new Vector3(0, 0, builderZOffset),
                         Quaternion.identity,
                         this.transform);
+                    break;*/
+                case LineType.Grass:
+                    Instantiate(
+                        worldLines.darkGrass,
+                        new Vector3(0, 0, builderZOffset),
+                        Quaternion.identity,
+                        this.transform);
                     break;
-                case LineType.Railway:
+                /*case LineType.Railway:
                     Instantiate(
                         worldLines.railway,
                         new Vector3(0, 0, builderZOffset),
                         Quaternion.identity,
                         this.transform);
+                    break;*/
+                case LineType.Railway: // Fake RoadBuffer
+                    Instantiate(
+                        worldLines.roadBuffer,
+                        new Vector3(0, 0, builderZOffset),
+                        Quaternion.identity,
+                        this.transform);
                     break;
-                case LineType.Road:
+                /*case LineType.Road:
                     Instantiate(
                         worldLines.road,
+                        new Vector3(0, 0, builderZOffset),
+                        Quaternion.identity,
+                        this.transform);
+                    break;*/
+                case LineType.Road:
+                    Instantiate(
+                        worldLines.roadLines,
+                        new Vector3(0, 0, builderZOffset),
+                        Quaternion.identity,
+                        this.transform);
+                    break;
+                case LineType.River:
+                    Instantiate(
+                        worldLines.river,
                         new Vector3(0, 0, builderZOffset),
                         Quaternion.identity,
                         this.transform);
