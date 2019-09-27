@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 182894000956104066}
+  - component: {fileID: 8353440211893794900}
   m_Layer: 0
   m_Name: DarkGreenLine
   m_TagString: Untagged
@@ -33,6 +34,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8353440211893794900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807023373312159537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f284f8d14e61544c09849dfcce1ff179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldProps:
+  - {fileID: 5084910890619371479, guid: 3da65556884ea45bea78179bd611fb61, type: 3}
+  - {fileID: 2029228856526542976, guid: cd2b29660a2684cfebf10c9967beb0cb, type: 3}
+  - {fileID: 9171778903266443389, guid: d9f102265d6e94766b60780b94be4afa, type: 3}
+  - {fileID: 8885931942427769758, guid: f3ff16da88cb6494d9875d0f7b5ef0a7, type: 3}
+  - {fileID: 5369027198816224630, guid: bdb072dd3650349d986c57242f33e77b, type: 3}
 --- !u!1001 &1066673308090286734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40,6 +59,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 182894000956104066}
     m_Modifications:
+    - target: {fileID: 7842867201042095912, guid: 97490ca3d34eb4f5a9f6c87ef78d4583,
+        type: 3}
+      propertyPath: m_Name
+      value: GreenBoundaryLeft
+      objectReference: {fileID: 0}
     - target: {fileID: 7842867201041924872, guid: 97490ca3d34eb4f5a9f6c87ef78d4583,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -95,11 +119,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7842867201042095912, guid: 97490ca3d34eb4f5a9f6c87ef78d4583,
-        type: 3}
-      propertyPath: m_Name
-      value: GreenBoundaryLeft
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97490ca3d34eb4f5a9f6c87ef78d4583, type: 3}
 --- !u!4 &7069212783039365510 stripped
@@ -115,11 +134,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 182894000956104066}
     m_Modifications:
-    - target: {fileID: 824197944319743845, guid: cdcfbe02e853149ec867f48b87a07362,
-        type: 3}
-      propertyPath: m_Name
-      value: DarkGreen
-      objectReference: {fileID: 0}
     - target: {fileID: 824197944320101189, guid: cdcfbe02e853149ec867f48b87a07362,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -175,6 +189,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 824197944319743845, guid: cdcfbe02e853149ec867f48b87a07362,
+        type: 3}
+      propertyPath: m_Name
+      value: DarkGreen
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdcfbe02e853149ec867f48b87a07362, type: 3}
 --- !u!4 &2419580915833886995 stripped
@@ -190,6 +209,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 182894000956104066}
     m_Modifications:
+    - target: {fileID: 7842867201042095912, guid: 97490ca3d34eb4f5a9f6c87ef78d4583,
+        type: 3}
+      propertyPath: m_Name
+      value: GreenBoundaryRight
+      objectReference: {fileID: 0}
     - target: {fileID: 7842867201041924872, guid: 97490ca3d34eb4f5a9f6c87ef78d4583,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -244,11 +268,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7842867201042095912, guid: 97490ca3d34eb4f5a9f6c87ef78d4583,
-        type: 3}
-      propertyPath: m_Name
-      value: GreenBoundaryRight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97490ca3d34eb4f5a9f6c87ef78d4583, type: 3}

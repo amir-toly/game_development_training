@@ -27,6 +27,7 @@ public class WorldGenerator : MonoBehaviour
     public WorldLines worldLines;
 
     private float builderZOffset = 3.6f;
+    private LineType _lastLineType;
 
     // Start is called before the first frame update
     void Start()
@@ -71,7 +72,7 @@ public class WorldGenerator : MonoBehaviour
                     break;*/
                 case LineType.Railway: // Fake RoadBuffer
                     Instantiate(
-                        worldLines.roadBuffer,
+                        worldLines.railway,
                         new Vector3(0, 0, builderZOffset),
                         Quaternion.identity,
                         this.transform);
@@ -84,8 +85,21 @@ public class WorldGenerator : MonoBehaviour
                         this.transform);
                     break;*/
                 case LineType.Road:
+                    if (_lastLineType == LineType.Road)
+                        Instantiate(
+                            worldLines.roadLines,
+                            new Vector3(0, 0, builderZOffset),
+                            Quaternion.identity,
+                            this.transform);
+                    else
+                        Instantiate(
+                            worldLines.roadBuffer,
+                            new Vector3(0, 0, builderZOffset),
+                            Quaternion.identity,
+                            this.transform);
+
                     Instantiate(
-                        worldLines.roadLines,
+                        worldLines.road,
                         new Vector3(0, 0, builderZOffset),
                         Quaternion.identity,
                         this.transform);
@@ -100,6 +114,7 @@ public class WorldGenerator : MonoBehaviour
             }
 
             builderZOffset += 0.9f;
+            _lastLineType = lineType;
         }
     }
 }
