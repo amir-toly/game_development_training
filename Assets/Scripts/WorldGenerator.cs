@@ -45,7 +45,7 @@ public class WorldGenerator : MonoBehaviour
     {
         for (int i = 0; i < linesToCreate; i++)
         {
-            LineType lineType = (LineType)Random.Range(0, 4);
+            LineType lineType = (LineType) Random.Range(0, 4);
 
             switch (lineType)
             {
@@ -100,7 +100,8 @@ public class WorldGenerator : MonoBehaviour
 
                     Instantiate(
                         worldLines.road,
-                        new Vector3(0, 0, builderZOffset),
+                        // Counter-intuitive: Why minus instead of plus?
+                        new Vector3(0, 0, builderZOffset - 0.1f),
                         Quaternion.identity,
                         this.transform);
                     break;
