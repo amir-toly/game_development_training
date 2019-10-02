@@ -57,7 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7060120957334160896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ae1f6ec4ec447f081ccfb254e4da56, type: 3}
+  m_Script: {fileID: 11500000, guid: f284f8d14e61544c09849dfcce1ff179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   worldProps:
@@ -153,16 +153,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8344701248774300122}
     m_Modifications:
-    - target: {fileID: 3668855234474962792, guid: 26512a58ba3564f4f9084d98bd15882e,
-        type: 3}
-      propertyPath: m_Name
-      value: GrassLimitL
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668855234474962792, guid: 26512a58ba3564f4f9084d98bd15882e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 2042794890287127550, guid: 26512a58ba3564f4f9084d98bd15882e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -218,6 +208,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3668855234474962792, guid: 26512a58ba3564f4f9084d98bd15882e,
+        type: 3}
+      propertyPath: m_Name
+      value: GrassLimitL
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668855234474962792, guid: 26512a58ba3564f4f9084d98bd15882e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26512a58ba3564f4f9084d98bd15882e, type: 3}
 --- !u!4 &8485470872763488296 stripped
@@ -233,16 +233,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8344701248774300122}
     m_Modifications:
-    - target: {fileID: 3668855234474962792, guid: 26512a58ba3564f4f9084d98bd15882e,
-        type: 3}
-      propertyPath: m_Name
-      value: GrassLimitR
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668855234474962792, guid: 26512a58ba3564f4f9084d98bd15882e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 2042794890287127550, guid: 26512a58ba3564f4f9084d98bd15882e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -297,6 +287,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668855234474962792, guid: 26512a58ba3564f4f9084d98bd15882e,
+        type: 3}
+      propertyPath: m_Name
+      value: GrassLimitR
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668855234474962792, guid: 26512a58ba3564f4f9084d98bd15882e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26512a58ba3564f4f9084d98bd15882e, type: 3}

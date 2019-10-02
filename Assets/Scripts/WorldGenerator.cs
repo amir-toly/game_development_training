@@ -15,9 +15,8 @@ public struct WorldLines
 {
     public GameObject darkGrass;
     public GameObject lightGrass;
-    public GameObject road;
-    public GameObject roadBuffer;
-    public GameObject roadLines;
+    public GameObject roadWithLines;
+    public GameObject roadWithoutLines;
     public GameObject railway;
     public GameObject river;
 }
@@ -26,7 +25,7 @@ public class WorldGenerator : MonoBehaviour
 {
     public WorldLines worldLines;
 
-    private float builderZOffset = 3.6f;
+    private float builderZOffset = 4;
     private LineType _lastLineType;
 
     // Start is called before the first frame update
@@ -57,11 +56,18 @@ public class WorldGenerator : MonoBehaviour
                         this.transform);
                     break;*/
                 case LineType.Grass:
-                    Instantiate(
-                        worldLines.darkGrass,
-                        new Vector3(0, 0, builderZOffset),
-                        Quaternion.identity,
-                        this.transform);
+                    if (builderZOffset % 2 == 0)
+                        Instantiate(
+                            worldLines.darkGrass,
+                            new Vector3(0, 0, builderZOffset),
+                            Quaternion.identity,
+                            this.transform);
+                    else
+                        Instantiate(
+                            worldLines.lightGrass,
+                            new Vector3(0, 0, builderZOffset),
+                            Quaternion.identity,
+                            this.transform);
                     break;
                 /*case LineType.Railway:
                     Instantiate(
@@ -87,23 +93,16 @@ public class WorldGenerator : MonoBehaviour
                 case LineType.Road:
                     if (_lastLineType == LineType.Road)
                         Instantiate(
-                            worldLines.roadLines,
+                            worldLines.roadWithLines,
                             new Vector3(0, 0, builderZOffset),
                             Quaternion.identity,
                             this.transform);
                     else
                         Instantiate(
-                            worldLines.roadBuffer,
+                            worldLines.roadWithoutLines,
                             new Vector3(0, 0, builderZOffset),
                             Quaternion.identity,
                             this.transform);
-
-                    Instantiate(
-                        worldLines.road,
-                        // Counter-intuitive: Why minus instead of plus?
-                        new Vector3(0, 0, builderZOffset - 0.1f),
-                        Quaternion.identity,
-                        this.transform);
                     break;
                 case LineType.River:
                     Instantiate(
@@ -114,7 +113,7 @@ public class WorldGenerator : MonoBehaviour
                     break;
             }
 
-            builderZOffset += 0.9f;
+            builderZOffset += 1;
             _lastLineType = lineType;
         }
     }
