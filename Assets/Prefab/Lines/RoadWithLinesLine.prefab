@@ -64,11 +64,11 @@ MonoBehaviour:
   - model: Blue Car
     prefab: {fileID: 4966078837335569467, guid: 80ba00c31c9974ba297ff64dcc9d8e98,
       type: 3}
-    unlocked: 1
+    unlocked: 0
   - model: Taxi
     prefab: {fileID: 3734353573738860233, guid: 225a4f632e5d14bb795b343641429d53,
       type: 3}
-    unlocked: 1
+    unlocked: 0
   - model: Purple Car
     prefab: {fileID: 2910175205642294953, guid: 353dca400eabb4d96b94338217305108,
       type: 3}
@@ -80,7 +80,7 @@ MonoBehaviour:
   - model: Truck
     prefab: {fileID: 1895018073408306769, guid: 4febc3787f3604331b22a0d6cbb6ed26,
       type: 3}
-    unlocked: 0
+    unlocked: 1
   - model: Orange Car
     prefab: {fileID: 8094818360581651683, guid: 7f7c6fb2e496346449777b67d1037844,
       type: 3}
@@ -88,7 +88,7 @@ MonoBehaviour:
   - model: Bus
     prefab: {fileID: 4338806159044796131, guid: 8c1c2675f6e6343f9ab1abe205c1518b,
       type: 3}
-    unlocked: 0
+    unlocked: 1
 --- !u!1001 &3143422198008170964
 PrefabInstance:
   m_ObjectHideFlags: 0
