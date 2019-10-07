@@ -69,6 +69,26 @@ MonoBehaviour:
     prefab: {fileID: 3734353573738860233, guid: 225a4f632e5d14bb795b343641429d53,
       type: 3}
     unlocked: 1
+  - model: Purple Car
+    prefab: {fileID: 2910175205642294953, guid: 353dca400eabb4d96b94338217305108,
+      type: 3}
+    unlocked: 0
+  - model: Red Car
+    prefab: {fileID: 7393049997940722609, guid: 62ec5f39e9a5648fbbdca142ffb4a27e,
+      type: 3}
+    unlocked: 0
+  - model: Truck
+    prefab: {fileID: 1895018073408306769, guid: 4febc3787f3604331b22a0d6cbb6ed26,
+      type: 3}
+    unlocked: 0
+  - model: Orange Car
+    prefab: {fileID: 8094818360581651683, guid: 7f7c6fb2e496346449777b67d1037844,
+      type: 3}
+    unlocked: 0
+  - model: Bus
+    prefab: {fileID: 4338806159044796131, guid: 8c1c2675f6e6343f9ab1abe205c1518b,
+      type: 3}
+    unlocked: 0
 --- !u!1001 &3143422198008170964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,16 +96,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8349765421531395276}
     m_Modifications:
-    - target: {fileID: 726328806337741933, guid: 767b43a23fd7a4dd9b71b468314924bc,
-        type: 3}
-      propertyPath: m_Name
-      value: RoadWithLines
-      objectReference: {fileID: 0}
-    - target: {fileID: 726328806337741933, guid: 767b43a23fd7a4dd9b71b468314924bc,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 772903272957507643, guid: 767b43a23fd7a4dd9b71b468314924bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -141,6 +151,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 726328806337741933, guid: 767b43a23fd7a4dd9b71b468314924bc,
+        type: 3}
+      propertyPath: m_Name
+      value: RoadWithLines
+      objectReference: {fileID: 0}
+    - target: {fileID: 726328806337741933, guid: 767b43a23fd7a4dd9b71b468314924bc,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 767b43a23fd7a4dd9b71b468314924bc, type: 3}
 --- !u!4 &2388678820007031279 stripped
@@ -156,16 +176,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8349765421531395276}
     m_Modifications:
-    - target: {fileID: 8625399142669060803, guid: d302df3cbd03044b4b1eeb3f57376c75,
-        type: 3}
-      propertyPath: m_Name
-      value: RoadLimitWithLinesR
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625399142669060803, guid: d302df3cbd03044b4b1eeb3f57376c75,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 6889961767806591776, guid: d302df3cbd03044b4b1eeb3f57376c75,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -221,6 +231,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8625399142669060803, guid: d302df3cbd03044b4b1eeb3f57376c75,
+        type: 3}
+      propertyPath: m_Name
+      value: RoadLimitWithLinesR
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625399142669060803, guid: d302df3cbd03044b4b1eeb3f57376c75,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d302df3cbd03044b4b1eeb3f57376c75, type: 3}
 --- !u!4 &1706350347126421993 stripped
@@ -236,16 +256,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8349765421531395276}
     m_Modifications:
-    - target: {fileID: 8625399142669060803, guid: d302df3cbd03044b4b1eeb3f57376c75,
-        type: 3}
-      propertyPath: m_Name
-      value: RoadLimitWithLinesL
-      objectReference: {fileID: 0}
-    - target: {fileID: 8625399142669060803, guid: d302df3cbd03044b4b1eeb3f57376c75,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 6889961767806591776, guid: d302df3cbd03044b4b1eeb3f57376c75,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -300,6 +310,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625399142669060803, guid: d302df3cbd03044b4b1eeb3f57376c75,
+        type: 3}
+      propertyPath: m_Name
+      value: RoadLimitWithLinesL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625399142669060803, guid: d302df3cbd03044b4b1eeb3f57376c75,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d302df3cbd03044b4b1eeb3f57376c75, type: 3}
