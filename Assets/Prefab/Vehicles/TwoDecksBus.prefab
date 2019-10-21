@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 182704640295455733}
   - component: {fileID: 5402152438188218752}
   - component: {fileID: 6646455589683290110}
-  - component: {fileID: 7843728187955707818}
+  - component: {fileID: 2719101731605977539}
   m_Layer: 0
   m_Name: TwoDecksBus
   m_TagString: Untagged
@@ -110,7 +110,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7843728187955707818
+--- !u!114 &2719101731605977539
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4338806159044796131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fff368cc4d3e443d69fb102b0f7a7e2e, type: 3}
+  m_Script: {fileID: 11500000, guid: 545fab94056834c249e94bcd0c0c0c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   carSpeed: 0

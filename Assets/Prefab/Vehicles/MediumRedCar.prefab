@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6202394017605403883}
   - component: {fileID: -7520421120128275658}
   - component: {fileID: 7551012108493552879}
-  - component: {fileID: -2740259294734560579}
+  - component: {fileID: 5395302997613847207}
   m_Layer: 0
   m_Name: MediumRedCar
   m_TagString: Untagged
@@ -110,7 +110,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-2740259294734560579
+--- !u!114 &5395302997613847207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7393049997940722609}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fff368cc4d3e443d69fb102b0f7a7e2e, type: 3}
+  m_Script: {fileID: 11500000, guid: 545fab94056834c249e94bcd0c0c0c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   carSpeed: 0

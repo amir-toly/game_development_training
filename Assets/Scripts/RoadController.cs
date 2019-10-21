@@ -45,6 +45,7 @@ public class RoadController : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(0, (moveDirection == 1) ? 180 : 0, 0);
 
             GameObject newCar = Instantiate(vehicles[carModel].prefab, transform.position + sideToStart, rotation, this.transform);
+            newCar.GetComponent<CarController>().carSpeed = speed * moveDirection;
 
             yield return new WaitForSeconds(distanceInSeconds);
         }
