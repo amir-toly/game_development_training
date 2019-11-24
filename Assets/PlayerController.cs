@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         _currentPosition = transform.position;
         _initialScale = transform.localScale;
 
-        _characterPrefab = Instantiate(characters[1].prefab, _currentPosition + characters[0].offset,
+        _characterPrefab = Instantiate(characters[4].prefab, _currentPosition + characters[0].offset,
           Quaternion.identity, this.transform);
 
         _characterBehaviour = _characterPrefab.GetComponent<ICharacterable>();
@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
 
         _elapsedTime = 0f;
 
-        _characterBehaviour.HopAudioPlay();
+        //_characterBehaviour.HopAudioPlay();
 
         _playerMoving = true;
     }
