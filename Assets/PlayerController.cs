@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
     private bool _playerMoving;
     private float _elapsedTime;
 
+    private float _obstacleDetectionDistance = 0.8f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -122,19 +124,27 @@ public class PlayerController : MonoBehaviour
         switch (direction)
         {
             case 'N':
-                _targetPosition = _currentPosition + new Vector3(0, 0, 1);
+                if (isJumpAllowed(new Vector3(0, 0, _obstacleDetectionDistance)))
+                    _targetPosition = _currentPosition + new Vector3(0, 0, 1);
+
                 _endRotation = Quaternion.Euler(0, 180, 0);
                 break;
             case 'S':
-                _targetPosition = _currentPosition + new Vector3(0, 0, -1);
+                if (isJumpAllowed(new Vector3(0, 0, -_obstacleDetectionDistance)))
+                    _targetPosition = _currentPosition + new Vector3(0, 0, -1);
+
                 _endRotation = Quaternion.Euler(0, 0, 0);
                 break;
             case 'W':
-                _targetPosition = _currentPosition + new Vector3(-1, 0, 0);
+                if (isJumpAllowed(new Vector3(-_obstacleDetectionDistance, 0, 0)))
+                    _targetPosition = _currentPosition + new Vector3(-1, 0, 0);
+
                 _endRotation = Quaternion.Euler(0, 90, 0);
                 break;
             case 'E':
-                _targetPosition = _currentPosition + new Vector3(1, 0, 0);
+                if (isJumpAllowed(new Vector3(_obstacleDetectionDistance, 0, 0)))
+                    _targetPosition = _currentPosition + new Vector3(1, 0, 0);
+
                 _endRotation = Quaternion.Euler(0, 270, 0);
                 break;
         }
@@ -144,5 +154,39 @@ public class PlayerController : MonoBehaviour
         _characterBehaviour.HopAudioPlay();
 
         _playerMoving = true;
+    }
+
+    private bool isJumpAllowed(Vector3 direction)
+    {
+        RaycastHit raycastHit;
+
+        LayerMask propMask = LayerMask.GetMask("WorldProps");
+
+        bool canJump = Physics.BoxCast(transform.position,
+            transform.localScale,
+            direction,
+            out raycastHit,
+            Quaternion.Euler(direction),
+            _obstacleDetectionDistance,
+            propMask);
+
+        return !canJump;
+    }
+
+    private void OnDrawGizmos()
+    {
+        RaycastHit raycastHit;
+
+        Gizmos.color = Color.red;
+
+        bool hitDetect = Physics.BoxCast(transform.position + new Vector3(0, 0.5f, 0),
+            transform.localScale,
+            transform.forward,
+            out raycastHit,
+            transform.rotation,
+            _obstacleDetectionDistance);
+
+        Gizmos.DrawRay(transform.position /* the pivot point */ + new Vector3(0, 0.5f, 0),
+            transform.forward * _obstacleDetectionDistance);
     }
 }
