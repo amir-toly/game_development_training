@@ -162,31 +162,31 @@ public class PlayerController : MonoBehaviour
 
         LayerMask propMask = LayerMask.GetMask("WorldProps");
 
-        bool canJump = Physics.BoxCast(transform.position,
-            transform.localScale,
-            direction,
-            out raycastHit,
-            Quaternion.Euler(direction),
-            _obstacleDetectionDistance,
-            propMask);
+        // Does the ray intersect any objects in the "propMask" layer?
+        bool canJump = Physics.Raycast(transform.position + new Vector3(0, 0.5f, 0), direction,
+            out raycastHit, _obstacleDetectionDistance, propMask);
 
+        // If the ray intersects any tree/stone then we cannot move. As the Raycast method returns 
+        // true in case of intersection, then we must reverse the result (intersect true -> return
+        // false to avoid jump). 
         return !canJump;
     }
 
     private void OnDrawGizmos()
     {
         RaycastHit raycastHit;
+        LayerMask propMask = LayerMask.GetMask("WorldProps");
 
-        Gizmos.color = Color.red;
-
-        bool hitDetect = Physics.BoxCast(transform.position + new Vector3(0, 0.5f, 0),
-            transform.localScale,
-            transform.forward,
-            out raycastHit,
-            transform.rotation,
-            _obstacleDetectionDistance);
-
-        Gizmos.DrawRay(transform.position /* the pivot point */ + new Vector3(0, 0.5f, 0),
-            transform.forward * _obstacleDetectionDistance);
+        if (Physics.Raycast(transform.position + new Vector3(0, 0.5f, 0), transform.forward,
+            out raycastHit, _obstacleDetectionDistance, propMask))
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(transform.position + new Vector3(0, 0.5f, 0), transform.forward);
+        }
+        else
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawRay(transform.position + new Vector3(0, 0.5f, 0), transform.forward);
+        }
     }
 }
