@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 1199952262531260897}
   - component: {fileID: 2450001673085319520}
   - component: {fileID: 6725098499305737922}
-  - component: {fileID: 7405679122527577963}
   m_Layer: 0
   m_Name: Duck
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,22 +206,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7405679122527577963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6702217501461886935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4b624d8607d74485bef15c105701952, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hopEffect: {fileID: 8300000, guid: ebdb1bda868c948e2be47b68a6c74b60, type: 3}
-  _quackEffects:
-  - {fileID: 8300000, guid: a8d040aab16b140a899e8cb25a5592d4, type: 3}
-  - {fileID: 8300000, guid: 503a5c3b2baae4a0cbc8d1f4da95a76c, type: 3}
-  - {fileID: 8300000, guid: de90a1122654d40a2896ac783f51ea83, type: 3}
-  - {fileID: 8300000, guid: 5709f5581b49543469d2ba18f4f2519e, type: 3}
-  - {fileID: 8300000, guid: 7bfe7db20cf2140b2946da74108d81df, type: 3}

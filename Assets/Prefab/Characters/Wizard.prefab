@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: -5284193523505575878}
   - component: {fileID: -892736261556234395}
   - component: {fileID: 3661236188385499676}
-  - component: {fileID: -8907083312502911410}
   m_Layer: 0
   m_Name: Wizard
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,16 +206,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-8907083312502911410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4734707250657615964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0653cabf0e9ea45a6bbaf766e83d5403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hopEffect: {fileID: 8300000, guid: 43d2fd41626c945148be30eac6eb411e, type: 3}

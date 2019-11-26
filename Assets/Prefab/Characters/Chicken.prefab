@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 8035200611928245552}
   - component: {fileID: 6085811891505356907}
   - component: {fileID: 4237501741738373466}
-  - component: {fileID: 7317470142381356305}
   m_Layer: 0
   m_Name: Chicken
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,25 +206,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7317470142381356305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3453450001780429611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2be83f2bee5b94a8d88502b83373dea8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hopEffect: {fileID: 8300000, guid: ebdb1bda868c948e2be47b68a6c74b60, type: 3}
-  _buckEffects:
-  - {fileID: 8300000, guid: 4174de506918644e7b25e2579e393948, type: 3}
-  - {fileID: 8300000, guid: 04a94a3242ddd4da39e9a758738f4d66, type: 3}
-  - {fileID: 8300000, guid: 4b1d7f3e8d2a641aa96ee0d5c13f7868, type: 3}
-  - {fileID: 8300000, guid: 0e7d396de3a7f495f8cd194f18624f0a, type: 3}
-  - {fileID: 8300000, guid: 54b9d62e5c05c44da819a8eda7b11e35, type: 3}
-  - {fileID: 8300000, guid: 62f8e6dd21b0d40759de382f7805783f, type: 3}
-  - {fileID: 8300000, guid: 67c988dc06fd54c29924bb1c0c8d3d54, type: 3}
-  - {fileID: 8300000, guid: 5d927a70b1fb44a0da26b679a5009d31, type: 3}

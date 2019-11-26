@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 6417109751721518903}
   - component: {fileID: 9217808783109915628}
   - component: {fileID: 6411873400535829551}
-  - component: {fileID: 340135956875123678}
   m_Layer: 0
   m_Name: AnglerFish
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,19 +207,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &340135956875123678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031359950231087211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c73d83fd5ed8e4264a5b8fb97d4c42ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hopEffect: {fileID: 8300000, guid: 43d2fd41626c945148be30eac6eb411e, type: 3}
 --- !u!1 &4708281231417038009
 GameObject:
   m_ObjectHideFlags: 0

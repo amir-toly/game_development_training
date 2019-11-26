@@ -88,29 +88,32 @@ public class PlayerController : MonoBehaviour
 
     private void WaitForKeyboardInput()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) ||
-            Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        if (GameManager.Instance.isPlayerAlive)
         {
-            float newScale = _initialScale.y * 0.8f;
-            transform.localScale = new Vector3(_initialScale.x, newScale, _initialScale.z);
-        }
+            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) ||
+                Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                float newScale = _initialScale.y * 0.8f;
+                transform.localScale = new Vector3(_initialScale.x, newScale, _initialScale.z);
+            }
 
-        //Debug.Log("Hello world");
-        if (Input.GetKeyUp(KeyCode.UpArrow))
-        {
-            TranslatePlayer('N');
-        }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
-        {
-            TranslatePlayer('S');
-        }
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
-        {
-            TranslatePlayer('W');
-        }
-        if (Input.GetKeyUp(KeyCode.RightArrow))
-        {
-            TranslatePlayer('E');
+            //Debug.Log("Hello world");
+            if (Input.GetKeyUp(KeyCode.UpArrow))
+            {
+                TranslatePlayer('N');
+            }
+            if (Input.GetKeyUp(KeyCode.DownArrow))
+            {
+                TranslatePlayer('S');
+            }
+            if (Input.GetKeyUp(KeyCode.LeftArrow))
+            {
+                TranslatePlayer('W');
+            }
+            if (Input.GetKeyUp(KeyCode.RightArrow))
+            {
+                TranslatePlayer('E');
+            }
         }
     }
 

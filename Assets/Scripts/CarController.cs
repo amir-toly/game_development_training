@@ -30,4 +30,15 @@ public class CarController : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Character"))
+        {
+            other.transform.localScale = new Vector3(1.5f, 0.05f, 0.8f);
+
+            GameManager.Instance.KillPlayer();
+            //Debug.Log("Hit by car!");
+        }
+    }
 }

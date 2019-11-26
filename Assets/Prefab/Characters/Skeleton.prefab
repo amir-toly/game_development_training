@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 8924138954147905323}
   - component: {fileID: 4009381604171776580}
   - component: {fileID: 8729275329526530359}
-  - component: {fileID: 6479982379783142367}
   m_Layer: 0
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,16 +206,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6479982379783142367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8900011848419238056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a632e86caf974d628e52c64e60276d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hopEffect: {fileID: 8300000, guid: 43d2fd41626c945148be30eac6eb411e, type: 3}

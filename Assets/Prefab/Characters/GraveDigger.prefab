@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 8947705016012464544}
   - component: {fileID: 100877236913318228}
   - component: {fileID: 7149053664877723543}
-  - component: {fileID: 8650179233973745007}
   m_Layer: 0
   m_Name: GraveDigger
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,19 +207,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8650179233973745007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4415290197796543113}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8647fb97c455549b3bcc4df9540876d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hopEffect: {fileID: 8300000, guid: 43d2fd41626c945148be30eac6eb411e, type: 3}
 --- !u!1 &7996142048495378188
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +265,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fdeb268df727d45b4b0e3306222ef49b, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
