@@ -132,25 +132,25 @@ public class PlayerController : MonoBehaviour
                 if (isJumpAllowed(new Vector3(0, 0, _obstacleDetectionDistance)))
                     _targetPosition = _currentPosition + new Vector3(0, 0, 1);
 
-                _endRotation = Quaternion.Euler(0, 180, 0);
+                _endRotation = Quaternion.Euler(0, 0, 0);
                 break;
             case 'S':
                 if (isJumpAllowed(new Vector3(0, 0, -_obstacleDetectionDistance)))
                     _targetPosition = _currentPosition + new Vector3(0, 0, -1);
 
-                _endRotation = Quaternion.Euler(0, 0, 0);
+                _endRotation = Quaternion.Euler(0, 180, 0);
                 break;
             case 'W':
                 if (isJumpAllowed(new Vector3(-_obstacleDetectionDistance, 0, 0)))
                     _targetPosition = _currentPosition + new Vector3(-1, 0, 0);
 
-                _endRotation = Quaternion.Euler(0, 90, 0);
+                _endRotation = Quaternion.Euler(0, 270, 0);
                 break;
             case 'E':
                 if (isJumpAllowed(new Vector3(_obstacleDetectionDistance, 0, 0)))
                     _targetPosition = _currentPosition + new Vector3(1, 0, 0);
 
-                _endRotation = Quaternion.Euler(0, 270, 0);
+                _endRotation = Quaternion.Euler(0, 90, 0);
                 break;
         }
 
