@@ -76,6 +76,8 @@ public class PlayerController : MonoBehaviour
             _playerMoving = false;
             _currentPosition = _targetPosition;
 
+            GameManager.Instance.Score = Mathf.CeilToInt(transform.position.z);
+
             _characterPrefab.GetComponent<Rigidbody>()
                 .AddForce(Vector3.down * 5, ForceMode.VelocityChange);
         }
