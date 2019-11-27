@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameManager : Singleton<GameManager>
 {
     private Text _tapToPlay;
-    private Text _scoreNumber;
+    private GameObject _gameOverPanel;
 
     private int _sessionScore;
     private int _topScore;
@@ -14,15 +14,22 @@ public class GameManager : Singleton<GameManager>
     void Awake()
     {
         _tapToPlay = GameObject.Find("/Canvas/TapToPlay").GetComponent<Text>();
-        _scoreNumber = GameObject.Find("/Canvas/ScoreNumber").GetComponent<Text>();
+        _gameOverPanel = GameObject.Find("/Canvas/GameOverPanel");
+
+        InitialiseGame();
+    }
+
+    public void InitialiseGame()
+    {
+        _gameOverPanel.gameObject.SetActive(false);
+        _tapToPlay.gameObject.SetActive(true);
+
+        _sessionScore = 0;
     }
 
     public void StartGame()
     {
         _tapToPlay.gameObject.SetActive(false);
-        _scoreNumber.gameObject.SetActive(true);
-
-        _sessionScore = 0;
 
         isPlayerAlive = true;
 
@@ -44,6 +51,8 @@ public class GameManager : Singleton<GameManager>
         SaveGameData();
 
         isPlayerAlive = false;
+
+        _gameOverPanel.SetActive(true);
     }
 
     public bool isPlayerAlive { get; private set; }
@@ -58,7 +67,7 @@ public class GameManager : Singleton<GameManager>
         set
         {
             _sessionScore = Mathf.Max(value, _sessionScore);
-            _scoreNumber.text = _sessionScore.ToString();
+            //_scoreNumber.text = _sessionScore.ToString();
         }
     }
 }

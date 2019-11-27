@@ -33,7 +33,7 @@ public class CarController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Character"))
+        if (other.CompareTag("Character") && GameManager.Instance.isPlayerAlive)
         {
             other.transform.localScale = new Vector3(1.5f, 0.05f, 0.8f);
 
