@@ -13,6 +13,7 @@ public class Character {
 public class PlayerController : MonoBehaviour
 {
     public List<Character> characters;
+    [SerializeField] private WorldGenerator worldGenerator;
     public float jumpDuration = 0.30f;
 
     private GameObject _characterPrefab;
@@ -77,6 +78,10 @@ public class PlayerController : MonoBehaviour
             _currentPosition = _targetPosition;
 
             GameManager.Instance.Score = Mathf.CeilToInt(transform.position.z);
+
+            // TODO: Manage the offset of the character in a nicer way (what about a public Const?)
+            if (transform.position.z > 15 && transform.position.z >= GameManager.Instance.Score)
+                worldGenerator.GenerateWorld(1);
 
             _characterPrefab.GetComponent<Rigidbody>()
                 .AddForce(Vector3.down * 5, ForceMode.VelocityChange);

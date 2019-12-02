@@ -25,6 +25,8 @@ public class WorldGenerator : MonoBehaviour
 {
     public WorldLines worldLines;
 
+    [SerializeField] private GameObject worldDestroyer;
+
     private float builderZOffset = 4;
     private LineType _lastLineType;
 
@@ -40,7 +42,7 @@ public class WorldGenerator : MonoBehaviour
         
     }
 
-    private void GenerateWorld(int linesToCreate = 1)
+    public void GenerateWorld(int linesToCreate = 1)
     {
         for (int i = 0; i < linesToCreate; i++)
         {
@@ -114,7 +116,12 @@ public class WorldGenerator : MonoBehaviour
             }
 
             builderZOffset += 1;
+
+            // Store the last type of line that we have instantiated
             _lastLineType = lineType;
+
+            // Destroy the world when moving forward
+            worldDestroyer.transform.position = new Vector3(0, 0, builderZOffset - 50);
         }
     }
 }
