@@ -71,6 +71,8 @@ public class GameManager : Singleton<GameManager>
         _sessionScore = 0;
         isPlayerAlive = true;
 
+        CameraController.Instance.Start();
+
         LoadGameData();
     }
 

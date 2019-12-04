@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class CameraController : Singleton<CameraController>
 {
     [SerializeField] private GameObject player;
     [SerializeField] private Vector3 cameraOffset;
@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private bool smoothFollow;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         transform.position = player.transform.position + cameraOffset;
     }
