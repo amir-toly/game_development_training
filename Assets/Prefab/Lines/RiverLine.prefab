@@ -62,6 +62,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce5415bfde794c31b7df4c5025ecfc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logs:
+  - size: S
+    prefab: {fileID: 6249394453288013858, guid: e648e861786c84f1bb7577a947356d6c,
+      type: 3}
+  - size: M
+    prefab: {fileID: 7189885938159992927, guid: 2f38c028dd5c7433c932d32709b8e6b9,
+      type: 3}
+  - size: L
+    prefab: {fileID: 6213925150576004360, guid: 6619bfbefcf9c4500a75ecb32178dd21,
+      type: 3}
 --- !u!82 &6425832782605013529
 AudioSource:
   m_ObjectHideFlags: 0

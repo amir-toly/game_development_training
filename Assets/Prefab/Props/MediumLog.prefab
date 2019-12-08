@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6763153211094422619}
   - component: {fileID: 1950772361529637541}
   - component: {fileID: 1127453387135809730}
-  - component: {fileID: 4576791479346679397}
+  - component: {fileID: 2792735322006846442}
   m_Layer: 0
   m_Name: MediumLog
   m_TagString: Untagged
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4576791479346679397
+--- !u!114 &2792735322006846442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,7 +88,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7189885938159992927}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 576f8417c8c5b45539cca03cc867616f, type: 3}
+  m_Script: {fileID: 11500000, guid: dd749e6753e2c49679d4d1a9747b8da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logSpeed: 0

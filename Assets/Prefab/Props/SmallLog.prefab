@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8581246030814237623}
   - component: {fileID: 3471819464387014927}
   - component: {fileID: 5289844400953187205}
-  - component: {fileID: -1917090076601444090}
+  - component: {fileID: 2418562001754570659}
   m_Layer: 0
   m_Name: SmallLog
   m_TagString: Untagged
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &-1917090076601444090
+--- !u!114 &2418562001754570659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,7 +88,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6249394453288013858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 576f8417c8c5b45539cca03cc867616f, type: 3}
+  m_Script: {fileID: 11500000, guid: dd749e6753e2c49679d4d1a9747b8da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logSpeed: 0
