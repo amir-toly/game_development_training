@@ -45,7 +45,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        _activeCharacter = GameObject.FindGameObjectWithTag("Character");
+        _activeCharacter = GameObject.FindGameObjectWithTag("Player");
 
         _charInitialLocation = _activeCharacter.transform.position;
         _charInitialRotation = _activeCharacter.transform.rotation;
