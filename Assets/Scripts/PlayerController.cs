@@ -131,17 +131,36 @@ public class PlayerController : MonoBehaviour
         _startRotation = transform.rotation;
         _endRotation = Quaternion.identity;
 
+        // Routine to jump from a log
+        // Explanation: when a character is on the log, it's not moving in absolute 1 unit
+        // increments, but in tiny increments. When jumping off the log, it must land in an absolute position.
+        // We must calculate the delta from existing character position
+        float nextXPosition = 0;
+        var deltaFromXAbsolutePosition = _currentPosition.x - Math.Truncate(_currentPosition.x);
+
+        if (deltaFromXAbsolutePosition != 0)
+            if (deltaFromXAbsolutePosition <= -0.50f)
+                nextXPosition = (float) (1 - Math.Abs(deltaFromXAbsolutePosition)) * -1;
+            else if (deltaFromXAbsolutePosition > -0.50f && deltaFromXAbsolutePosition < 0)
+                nextXPosition = (float) Math.Abs(deltaFromXAbsolutePosition);
+            else if (deltaFromXAbsolutePosition > 0 && deltaFromXAbsolutePosition < 0.50f)
+                nextXPosition = (float) Math.Abs(deltaFromXAbsolutePosition) * 1;
+            else if (deltaFromXAbsolutePosition > -0.50f)
+                nextXPosition = (float) (1 - Math.Abs(deltaFromXAbsolutePosition));
+
+        Debug.Log(nextXPosition);
+
         switch (direction)
         {
             case 'N':
                 if (isJumpAllowed(new Vector3(0, 0, _obstacleDetectionDistance)))
-                    _targetPosition = _currentPosition + new Vector3(0, 0, 1);
+                    _targetPosition = _currentPosition + new Vector3(nextXPosition, 0, 1);
 
                 _endRotation = Quaternion.Euler(0, 0, 0);
                 break;
             case 'S':
                 if (isJumpAllowed(new Vector3(0, 0, -_obstacleDetectionDistance)))
-                    _targetPosition = _currentPosition + new Vector3(0, 0, -1);
+                    _targetPosition = _currentPosition + new Vector3(nextXPosition, 0, -1);
 
                 _endRotation = Quaternion.Euler(0, 180, 0);
                 break;

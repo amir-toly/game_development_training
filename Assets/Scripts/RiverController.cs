@@ -77,9 +77,9 @@ public class RiverController : MonoBehaviour
             _waterSplash.Play();
             _splashSound.Play();
 
-            //other.gameObject.SetActive(false);
+            other.gameObject.SetActive(false);
 
-            //GameManager.Instance.KillPlayer();
+            GameManager.Instance.KillPlayer();
         }
     }
 }

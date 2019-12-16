@@ -6,6 +6,8 @@ public class LogController : MonoBehaviour
 {
     [HideInInspector] public float logSpeed;
 
+    private float _logCharacterDistance;
+
     private Vector3 _currentLogPosition;
     private int _logDirection;
 
@@ -63,5 +65,21 @@ public class LogController : MonoBehaviour
         _currentLogPosition.x += _currentSpeed * Time.deltaTime;
 
         transform.position = _currentLogPosition;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Character"))
+        {
+            _logCharacterDistance = other.transform.parent.position.x - this.transform.position.x;
+        }
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.CompareTag("Character"))
+        {
+            other.transform.parent.transform.position = this.transform.position + new Vector3(_logCharacterDistance, 0, 0);
+        }
     }
 }

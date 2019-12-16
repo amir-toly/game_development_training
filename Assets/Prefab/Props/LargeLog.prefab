@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6900933931770906276}
   - component: {fileID: 939443958589163275}
   - component: {fileID: 2280479089142623474}
+  - component: {fileID: 1063726584438585876}
   m_Layer: 0
   m_Name: LargeLog
   m_TagString: Untagged
@@ -91,3 +92,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd749e6753e2c49679d4d1a9747b8da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logSpeed: 0
+--- !u!65 &1063726584438585876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213925150576004360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4, y: 0.2, z: 0.4}
+  m_Center: {x: 0, y: 0.1, z: 0}
